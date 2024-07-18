@@ -1,5 +1,7 @@
 import Header from "./components/header.jsx";
 import Footer from "./components/footer.jsx";
+import Input from "./components/input.jsx";
+import Todo from "./components/todo.jsx";
 
 export default function Home() {
   return (
@@ -11,35 +13,17 @@ export default function Home() {
       {/* tasks container */}
       <div style={{ maxWidth: "400px" }} className="mx-auto">
         {/* task input */}
-        <div className="d-flex gap-1">
-          <input
-            className="form-control"
-            placeholder="Insert a task here.."
-          ></input>
-          <button className="btn btn-primary">Add</button>
-        </div>
+        <Input/>
         {/* task */}
-        <div className="d-flex p-3 gap-2 align-items-center border-bottom">
-          <span>Read a book</span>
-          <button className="btn btn-success">Done</button>
-          <button className="btn btn-danger">Delete</button>
-        </div>
+        <Todo todo="Read a book"/>
         {/* task */}
-        <div className="d-flex p-3 gap-2 align-items-center border-bottom">
-          <span>Take a shower</span>
-          <button className="btn btn-success">Done</button>
-          <button className="btn btn-danger">Delete</button>
-        </div>
+        <Todo todo="Take a shower"/>
         {/* task */}
-        <div className="d-flex p-3 gap-2 align-items-center border-bottom">
-          <span>Sleep</span>
-          <button className="btn btn-success">Done</button>
-          <button className="btn btn-danger">Delete</button>
-        </div>
+        <Todo todo="Sleep"/>
       </div>
 
       {/* //footer section */}
-      <Footer/>
+      <Footer year="2024" fullName="Kritsaran Khuntip" studentId="660610740"/>
     </div>
   );
 }

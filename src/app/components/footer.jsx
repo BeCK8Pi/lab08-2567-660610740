@@ -1,10 +1,10 @@
 import React from 'react'
 
-function footer() {
+function footer(what) {
   return (
     <div className="mt-3">
         <p className="text-secondary text-center">
-          copyright © 2023 Chayanin Suatap 12345678
+          copyright © {what.year} {what.fullName} {what.studentId}
         </p>
     </div>
   )
